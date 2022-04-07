@@ -1,0 +1,263 @@
+<?php
+function createtables($mysqli) {
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_addons` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `adid` text NOT NULL, `toproduct` text NOT NULL, `orderid` int(11) NOT NULL, `half` int(11) NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_adminlogs` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `ip` text NOT NULL, `date` text NOT NULL, `user` text NOT NULL, `pass` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_birthday` (`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,`did` int(11) NOT NULL,`uid` int(11) NOT NULL,`until` text NOT NULL )");
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_buyers` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` text NOT NULL, `phone` text NOT NULL, `street` text NOT NULL, `housenum` text NOT NULL, `city` text NOT NULL,  `birthday` date NOT NULL, `secureq` text NOT NULL, `securea` text NOT NULL, `code` text NOT NULL, `salt` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_cat` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` text NOT NULL, `img` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_closed` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `date` int(11) NOT NULL, `until` int(11) NOT NULL, `reason` text NOT NULL, `loc` int(11) NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_coupons` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `code` text NOT NULL, `show` int(11) NOT NULL, `describe` text NOT NULL, `percent` int(11) NOT NULL, `from` int(11) NOT NULL, `to` int(11) NOT NULL, `limit` text NOT NULL, `deleted` tinyint(1) NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_deals` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` text NOT NULL, `price` text NOT NULL, `products` text NOT NULL, `img` text NOT NULL, `deleted` int(11) NOT NULL, `bd` int(11) NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_gallery` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `image` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_locations` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `adress` text NOT NULL, `city` text NOT NULL, `phone` text NOT NULL, `day1` text NOT NULL, `day2` text NOT NULL, `day3` text NOT NULL, `day4` text NOT NULL, `day5` text NOT NULL, `day6` text NOT NULL, `day7` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_logs` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `ip` text NOT NULL, `date` text NOT NULL, `phone` text NOT NULL, `ans` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_enters` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `ip` text NOT NULL)"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_order` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `products` text NOT NULL, `buyer` text NOT NULL, `adress` text NOT NULL, `date` datetime NOT NULL, `price` text NOT NULL, `paid` text NOT NULL, `status` int(11) NOT NULL, `loc` int(11) NOT NULL, `deliver` int(11) NOT NULL, `coupon` int(11) NOT NULL, `more` text NOT NULL, `guest` text NOT NULL, `salt` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_pages` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `showm` int(11) NOT NULL, `showb` int(11) NOT NULL, `title` text NOT NULL, `content` text NOT NULL, `link` text NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_products` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` text NOT NULL, `des` text NOT NULL, `type` int(11) NOT NULL, `price` text NOT NULL, `img` text NOT NULL, `needad` text NOT NULL, `half` int(11) NOT NULL, `show` int(11) NOT NULL)"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_purchases` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `index` text NOT NULL, `uid` int(11) NOT NULL )"); 
+$mysqli->query("CREATE TABLE IF NOT EXISTS `zz_settings` ( `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `logo` text NOT NULL, `url` text NOT NULL, `paypal` text NOT NULL, `mail` text NOT NULL, `phone` text NOT NULL, `name` text NOT NULL, `minbill` text NOT NULL, `deliver` text NOT NULL, `logtry` int(11) NOT NULL, `logtime` int(11) NOT NULL, `user` text NOT NULL, `pass` text NOT NULL, `salt` text NOT NULL, `version` text NOT NULL, `pw` text NOT NULL, `peleu` text NOT NULL, `pelep` text NOT NULL, `pelem` text NOT NULL, `paycall` int(11) NOT NULL, `allowbd` int(11) NOT NULL,`autoprint` int(11) NOT NULL)"); 
+}
+function galleryinsert($mysqli) {
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(1, '1.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(2, '2.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(3, '3.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(4, '4.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(5, '5.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(6, '6.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(7, '7.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(8, 'cheese.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(9, 'corn.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(10, 'meat.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(11, 'mushroom.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(12, 'olive.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(13, 'onion.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(14, 'pepper.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(15, 'pineapple.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(16, 'pizza.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(17, 'pizza2.png')");
+$mysqli->query("INSERT INTO `zz_gallery` (`id`, `image`) VALUES(18, 'tomato.png')");
+}
+$make = $_GET['make'];
+if($make == 'actions') {
+$do = $_GET['do'];
+if($do == step1) {
+$server = $_POST['server']; $duser = $_POST['duser']; $dname = $_POST['dname']; $dpass = $_POST['dpass'];
+if($server == Null || $duser == Null || $dname == Null || $dpass == Null) {
+echo 'e1';
+}else{
+if(!is_writable('config.php')) {
+echo 'e3';
+}else{
+$mysqli = new mysqli($server, $duser, $dpass, $dname);
+createtables($mysqli);
+galleryinsert($mysqli);
+
+$file = fopen('config.php', 'w');$g = '<?php
+$dbserver = "'.$server.'";
+$dbusername = "'.$duser.'";
+$dbname = "'.$dname.'";
+$dbpassword = "'.$dpass.'";
+$mysqli = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);';
+$text = <<<Print
+%q1 = %mysqli->query("SELECT * FROM `zz_settings` WHERE `id`='1'");
+%query = %q1->fetch_assoc(); %logo = %query['logo']; %adminmail = %query['mail']; %paypal = %query['paypal']; %orderphone = %query['phone'];
+%sitename = %query['name']; %minbill = %query['minbill']; %deliverprice = %query['deliver']; %logtry = %query['logtry']; %logtime = %query['logtime']; %url = %query['url']; %suser = %query['user']; %spass = %query['pass'];
+%allowbd = %query['allowbd']; %autoprint = %query['autoprint'];
+%style = %query['style']; %sitepw = %query['pw']; %sitesalt = %query['salt']; %theme = %query['theme']; %peleu = %query['peleu']; %pelep = %query['pelep']; %pelem = %query['pelem']; %paycall = %query['paycall'];
+if(%paycall == 0) { %paycall = ''; }
+%version = %query['version'];
+require_once('order.php');
+require_once('paypal/paypal.class.php');
+%p = new paypal_class; 
+%p->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';
+if (isset(%_COOKIE['phone']) || isset(%_COOKIE['guest']) || isset(%_COOKIE['salt'])) {
+if(isset(%_COOKIE['phone'])) {
+%ch = %mysqli->query("SELECT * FROM `zz_buyers`");
+while(%pd = %ch->fetch_assoc()) {%cc = md5(%pd['phone'].','.%pd['id'].%pd['salt']); %id = %pd['id'];
+%cuser = %_COOKIE['phone'];
+if(%cc == %cuser) { %canlogin = 1;
+%cx = %mysqli->query("SELECT * FROM `zz_buyers` where `id`='%id'");
+while(%pq = %cx->fetch_assoc()) {%myuid = %pq['id'];%myphone = %pq['phone'];%myname = %pq['name'];%mystreet = %pq['street'];%myhousenum = %pq['housenum'];%mycity = %pq['city'];%myq = %pq['secureq'];%mya = %pq['securea'];%mycode = %pq['code'];}
+break;
+} } 
+if(%canlogin != 1) { setcookie("guest","",time()-84600); }
+}else{
+if(isset(%_COOKIE['guest'])) {
+%ch = %mysqli->query("SELECT * FROM `zz_order` WHERE `status`='0'");
+while(%pd = %ch->fetch_assoc()) {%cc = md5(%pd['buyer'].','.%pd['id']); %id = %pd['id'];
+%cuser = %_COOKIE['guest'];
+if(%cc == %cuser) { %canlogin = 1; %guest = 1;
+%myuid = %pd['id']; %myphone = %pd['buyer']; %myname = %pd['guest'];
+break;
+} } 
+if(%canlogin != 1) { setcookie("guest","",time()-84600); }
+}else{
+if(isset(%_COOKIE['salt'])) {
+%ch = %mysqli->query("SELECT * FROM `zz_order` WHERE `salt`!=''");
+while(%pd = %ch->fetch_assoc()) {%cc = md5(%pd['salt'].','.%pd['id']); %id = %pd['id'];
+%cuser = %_COOKIE['salt'];
+if(%cc == %cuser) { %noreg = 1; %canlogin = 1;
+%mysalt = %pd['salt']; %myname = %pd['guest'];
+break;
+} } }
+} } }
+if(%myphone == '') { %myphone ='none'; }
+if(%mysalt == '') { %mysalt ='none'; }
+?>
+Print;
+
+$text = str_replace("%",'$',$text);
+$text = $g.$text;
+fwrite($file, $text);
+} }
+}else{
+require_once('config.php');
+if($do == 'step2') {
+$url = $_POST['url']; $name = $_POST['name']; $user = $_POST['user']; $pass = $_POST['pass']; $pw = $_POST['pw']; $version = '0.1';
+if($url == Null || $name == Null || $user == Null || $pass == Null || $pw == Null) {
+echo 'e1';
+}else{ $pass = md5($pass); 
+$mysqli->query("INSERT INTO `zz_settings`(`url`,`name`,`user`,`pass`,`version`,`pw`,`logtry`,`logtime`) VALUES('$url','$name','$user','$pass','$version','$pw','10','5')");
+}
+}else{
+echo 'Error!';
+} }
+die;
+}
+
+$url = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
+$adminurl = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/admin.php';
+if(substr($url,-1) == '/') { $url = substr($url,0,-1); }
+
+echo <<<Print
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="rtl">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>התקנת המערכת Pizzer</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" media="all"/>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<style type="text/css">
+body {background:#42736F; font-family:arial; font-size:10pt;}
+.page,.page2,.page3 {background:#FFFFFF; width:800px; position:absolute;}
+.title {background:#00B5FA; padding:10px; font-size:15pt; color:white; font-weight:bold;}
+input[type=text],textarea,input[type=password] {background:white; border:1px solid #777777; padding:3px; color:#010101; font-family:arial;}
+input[type=text]:hover,input[type=text]:focus,textarea:hover,textarea:focus,input[type=password]:hover,input[type=password]:focus {border:1px solid #3399FF;}
+.next {background:#EBEBEB; padding:12px; margin-top:5px;}
+input[type=submit] {background:#F05100; border:none; padding:7px 10px; color:white; font-weight:bold; font-size:14pt; font-family:arial; float:left;}
+input[type=submit]:hover {opacity:0.9;}
+.done {background:#0440B8; border:none; padding:7px 10px; color:white; font-weight:bold; font-size:14pt; font-family:arial; float:left; cursor:default;}
+.done:hover {opacity:0.9;}
+.fullwin {background:black; opacity:0.4; width:100%; height:100%; position:absolute; top:0; right:0; z-index:5; display:none;}
+.error {background:#696969; width:100%; padding:20px 0 20px; color:white; position:absolute;
+top:40px; right:0; left:0; margin:auto; z-index:6; font-size:13pt; display:none;}
+.ok {background:#26A0DA; border:none; padding:5px 15px; color:white; font-size:10pt; font-family:arial; float:left; cursor:default;}
+.ok:hover {opacity:0.9;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+$(".ok").click(function() {
+$(".fullwin,.error").fadeOut(300);
+});
+$(".nextstep").click(function(eventObject) {
+eventObject.preventDefault();
+var server = $("#server").val(),duser = $("#duser").val(),dname = $("#dname").val(),dpass = $("#dpass").val();
+$.ajax({type:"POST",url:"?make=actions&do=step1",data:({server:server,duser:duser,dname:dname,dpass:dpass}),success:function(data) {
+if(data == "e1") {
+$(".fullwin,.error").fadeIn(300);
+$(".err").html("אחד מהשדות נשאר ריק.");
+}else{
+if(data == "e2") {
+$(".fullwin,.error").fadeIn(300);
+$(".err").html("לא ניתן להתחבר למסד.");
+}else{
+if(data == "e3") {
+$(".fullwin,.error").fadeIn(300);
+$(".err").html("לא ניתן לערוך את config.php. בדוק כי נתת הרשאת 666 לקובץ.");
+}else{
+$(".password").text(data);
+$(".page").hide("slide",{direction:"up",easing:"easeInOutCirc"},800);
+$(".page2").show("slide",{direction:"down",easing:"easeInOutCirc"},800);
+} } } }
+});
+});
+
+$(".nextstep2").click(function(eventObject) {
+eventObject.preventDefault();
+var url = $("#url").val(),name = $("#name").val(),user = $("#user").val(),pass = $("#pass").val(), pw = $("#pw").val();
+$.ajax({type:"POST",url:"?make=actions&do=step2",data:({url:url,user:user,name:name,pass:pass,pw:pw}),success:function(data) {
+if(data == "e1") {
+$(".fullwin,.error").fadeIn(300);
+$(".err").html("אחד מהשדות נשאר ריק.");
+}else{
+$(".password").text(data);
+$(".page2").hide("slide",{direction:"up",easing:"easeInOutCirc"},800);
+$(".page3").show("slide",{direction:"down",easing:"easeInOutCirc"},800);
+} }
+});
+});
+
+$(".done").click(function() {
+window.location.href = "$url";
+});
+
+});
+</script>
+<div style="margin:10px 0 10px;">
+<div style="background:#11A070; width:770px; margin:auto; font-size:25pt; text-align:center; color:white; padding:10px 15px; font-weight:bold;">
+התקנת המערכת Pizzer
+</div></div>
+<div class="fullwin"></div><div class="error"><div style="width:700px; margin:auto;"><span style="font-size:30pt;">שגיאה!</span><div class="err"></div><BR><div class="ok">אישור</div></div></div>
+<div style="width:800px; margin:auto;">
+<div class="page">
+<div class="title">שלב 1 - תחילת ההתקנה</div>
+<form action='' method="POST">
+<div style="padding:5px 10px;">
+ברוכים הבאים להתקנה של Pizzer. <BR>
+לפני שאתם מתחילים את ההתקנה, תנו הרשאת 666 לקובץ config.php.
+<BR>
+<b>פרטי SQL:</b><BR>
+<table style="margin:auto;">
+<tr><td>שרת: </td><td><input type="text" id="server" value="localhost" autocomplete="off" required></td></tr>
+<tr><td>שם משתמש: </td><td><input type="text" id="duser" autocomplete="off"></td></tr>
+<tr><td>שם: </td><td><input type="text" id="dname" autocomplete="off"></td></tr>
+<tr><td>סיסמא: </td><td><input type="password" id="dpass" autocomplete="off"> </td></tr>
+</table>
+</div>
+<div class="next"><input type="submit" value="הבא" name="submit" class="nextstep"><div style="clear:both;"></div></div>
+</form>
+</div>
+<div class="page2" style="display:none;">
+<div class="title">שלב 2 - הגדרות</div>
+<form action='' method="POST">
+<div style="padding:5px 10px;">
+<table style="margin:auto;">
+<tr><td>כתובת האתר:</td><td><input type="text" id="url" value="$url" autocomplete="off"></td></tr>
+<tr><td>שם האתר:</td><td><input type="text" id="name" autocomplete="off"></td></tr>
+<tr><td>שם משתמש לאדמין:</td><td><input type="text" id="user" autocomplete="off"></td></tr>
+<tr><td>סיסמא לאדמין:</td><td><input type="password" id="pass" autocomplete="off"></td></tr>
+<tr><td>מספר רישיון:</td><td><input type="password" id="pw" autocomplete="off"></td></tr>
+</table>
+</div>
+<div class="next"><input type="submit" value="הבא" name="submit" class="nextstep2"><div style="clear:both;"></div></div>
+</form>
+</div>
+<div class="page3" style="display:none;">
+<div class="title">שלב 3 - סיום ההתקנה</div>
+<div style="padding:5px 10px;">
+ההתקנה הושלמה בהצלחה! <BR>
+מחק את קובץ ה install.php למניעת פריצות לאתר. <BR>
+יש לתת הרשאת 777 לתיקיה images/uploads. <BR>
+מומלץ לשמור את הקישור לפאנל הניהול: <BR>
+<a href="$adminurl" target="_blank">$adminurl</a>
+</div>
+<div class="next">
+<div class="done">לאתר</div><div style="clear:both;"></div>
+</div></div>
+</div>
+
+Print;
+?>

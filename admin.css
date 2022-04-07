@@ -1,0 +1,344 @@
+.title {background:#d77b31; border-radius:4px 3px 0 0; color:white; font-weight:bold; padding:7px;}
+input,textarea,select {font-family:arial;}
+input[type=text],input[type=password],textarea,.file {background:#f1f1f1; border:1px solid #E5E5E5; border-radius:3px; padding:2px;} 
+input[type=submit],.loadmore {background:#d77b31; cursor:default; text-align:center; border:none; color:white; font-weight:bold; padding:7px 15px; border-radius:3px; transition: opacity .25s ease-in-out; -moz-transition: opacity .25s ease-in-out; -webkit-transition: opacity .25s ease-in-out;}
+input[type=submit]:hover,.loadmore:hover {opacity:0.8;}
+input:disabled {opacity:0.5;}
+.imini {width:47px; padding:1px;}
+.catload {background:#787878; width:32px; height:32px; margin:auto; border-radius:7px; padding:10px;}
+.loadbox {width:300px; margin:auto; position:fixed; right:0; left:0; text-align:center; padding-top:50px; z-index:10; display:none; }
+.mblock {background:white; width:350px; border-radius:5px; margin:10% auto 0 auto;}
+.mainblock {background:white; width:850px; border-radius:5px; float:right; margin:20px 20px 20px 0;}
+.welcome {background:white; width:850px; border-radius:5px; float:right; margin-right:20px;
+color:#7D7D7D; font-weight:bold; font-size:13pt;}
+.ui-widget-header {background:gray;}
+.redb,.additem {background:#c90628; padding:5px 15px; float:left; color:white; font-size:12pt;}
+.offp {width:400px; float:right;  margin-right:10px;}
+.offp:nth-child(2n+1){ clear:both; }
+.cart {background:#FEFAF7; box-shadow:0 0 1px #CFBDBB; overflow:hidden; border-radius:3px;}
+.boxtitle {padding:12px 10px; background:#F6F1EB; color:#474642; font-weight:normal;}
+.redb:hover,.additem:hover,.button:hover,.ibutton:hover {background:#E01D3D;}
+.protitle {font-size:13pt; width:400px; padding:5px; margin:auto; color:black; font-weight:bold; text-shadow:0 2px white;}
+.prod {width:400px; height:157px; position: relative;}
+.infopro {background:rgba(0,0,0,0.53); position:absolute; bottom:0; font-size:17pt; width:380px; padding:10px; color:white; font-weight:bold;}
+.notice {background: #3a3a3a;
+background: -moz-linear-gradient(top,  #3a3a3a 0%, #262626 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a3a3a), color-stop(100%,#262626));
+background: -webkit-linear-gradient(top,  #3a3a3a 0%,#262626 100%);
+background: -o-linear-gradient(top,  #3a3a3a 0%,#262626 100%);
+background: -ms-linear-gradient(top,  #3a3a3a 0%,#262626 100%);
+background: linear-gradient(to bottom,  #3a3a3a 0%,#262626 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#262626',GradientType=0 );
+border-right:5px solid #EAD34D; padding:7px; font-size:11pt; color:white; font-weight:bold; margin-top:15px; }
+#error {font-size:10pt; color:red; margin-top:3px; display:none;}
+.content {width:1000px; margin:30px auto;}
+.menu {background:white; border-radius:5px; list-style:none; margin:0; padding:0 0 15px 0; width:130px; float:right;  text-align:center;}
+.menu a {font-size:11pt; color:#2f2f2f; text-decoration:none;}
+.menu a li {margin:0; padding:3px 0; transition: background .12s ease-in-out; -moz-transition: background .12s ease-in-out; -webkit-transition: background .12s ease-in-out;}
+.menu a li:hover {background:#c9452b;color:white;}
+.mtitle {color:#aaaaaa; font-weight:bold; font-size:13pt; padding:15px 0 5px !important;}
+hr {background-color:#e3e3e3;border:none;height:1px;margin:10px 0 0 0;}
+.welcome a {font-size:11pt; color:#2f2f2f; text-decoration:none; border-right:1px solid #e3e3e3; padding:10px;}
+.subtitle {font-size:15pt; color:#7D7D7D;}
+a {color:black;}
+.choose {position:absolute; font-size:10pt; padding:3px 5px; width:150px; overflow:hidden; white-space: nowrap;}
+.st {min-width:80px; float:right; text-align:center; margin:0 10px;}
+.log {min-width:80px; float:right; text-align:center; margin:15px 18px;}
+.catdes {font-size:12pt; text-align:center; padding:5px 0; font-weight:bold; text-align:center;}
+.cat {width:100px; height:80px; border-radius:5px; float:right; margin:5px 7px 25px 0;}
+.addon {width:70px; height:80px; border-radius:5px; float:right; margin:5px 7px 25px 0; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background:none !important; border:none !important; opacity:0.5; transition: opacity .25s ease-in-out; -moz-transition: opacity .25s ease-in-out; -webkit-transition: opacity .25s ease-in-out;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {opacity:1;}
+.percent {font-size:8pt; color:white;}
+.cus {border-collapse:collapse; width:830px; margin-top:10px;}
+.cus td {padding:5px 8px; border:1px solid #e3e3e3;}
+.cushead {background:#504b41;color:white;font-weight:bold;}
+.cushead td {border:none;}
+.coupontext {background:#E5E5E5; padding:5px; font-size:11pt; font-weight:bold; font-size:10pt; text-decoration:none; color:#E03350;}
+.submenu,.submenu1 {background:white;border:1px solid #E3E3E3;position:absolute;margin:0;padding:0;list-style:none;border-radius:5px;overflow:hidden;}
+.submenu a,.submenu1 a {text-decoration:none;font-size:10pt;}
+.submenu a li,.submenu1 a li {padding:7px 15px; display:block; margin:0;transition: background .12s ease-in-out; -moz-transition: background .12s ease-in-out; -webkit-transition: background .12s ease-in-out;}
+.submenu a li:hover,.submenu1 a li:hover {background:#c9452b;color:white;}
+.ordermenu {margin:0;padding:0;list-style:none;}
+.ordermenu li {padding:0; margin:0; display:inline; font-size:10pt;}
+.ordermenu li a {font-size:10pt;}
+.vertical {list-style:none; text-align:center; padding:0; float:right;}
+.vertical li {float:right;}
+.vertical li a {text-decoration:none; font-size:14pt;}
+.vertical li:nth-child(2n+1) {clear:both; width:130px; text-align:right;}
+.side {list-style:none; text-align:center; margin-top:100px; padding:0;}
+.side li {margin:5px 0;}
+.side li a {text-decoration:none; font-size:14pt;}
+.lmenu {vertical-align:middle; transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg);}
+.rmenu {vertical-align:middle; }
+.choosemenu,.callchoose {background:white; border:1px solid gray; border-radius:2px; display:none; position:absolute; z-index:20; list-style:none; padding:0; margin:0; width:50px;}
+.callchoose {width:80px;}
+.choosemenu li,.callchoose li {padding:3px 5px; }
+.choosemenu li:hover,.callchoose li:hover {background:#36A9DB; color:white;}
+.choosemenu a,.callchoose a {color:black; text-decoration:none; text-align:right; font-size:10pt; }
+.ui-dialog-buttonset {text-align:right;}
+.helpers {cursor:pointer;}
+.selectboxit-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.selectboxit-container * {
+  font: 14px Helvetica, Arial;
+  /* Prevents text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+/* Button */
+.selectboxit-container .selectboxit {
+
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+/* Height and Vertical Alignment of Text */
+.selectboxit-container span, .selectboxit-container .selectboxit-options a {
+  height: 30px; /* Height of the drop down */
+  line-height: 30px; /* Vertically positions the drop down text */
+  display: block;
+}
+
+/* Focus pseudo selector */
+.selectboxit-container .selectboxit:focus {
+  outline: 0;
+}
+
+/* Disabled Mouse Interaction */
+.selectboxit.selectboxit-disabled, .selectboxit-options .selectboxit-disabled {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+/* Button Text */
+.selectboxit-text {
+  text-indent: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float:right;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+  margin-left: 5px;
+}
+
+/* Options List */
+.selectboxit-container .selectboxit-options {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 100%;  /* Minimum Width of the dropdown list box options */
+  *width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  cursor: pointer;
+  display: none;
+  z-index: 9999999999999;
+  border-radius: 3px;
+  text-align: right;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Individual options */
+ .selectboxit-option .selectboxit-option-anchor{
+  padding: 0 2px;
+}
+
+/* Individual Option Hover Action */
+.selectboxit-option .selectboxit-option-anchor:hover {
+  text-decoration: none;
+}
+
+/* Individual Option Optgroup Header */
+.selectboxit-option, .selectboxit-optgroup-header {
+  text-indent: 5px; /* Horizontal Positioning of the select box option text */
+  margin: 0;
+  list-style-type: none;
+}
+
+/* The first Drop Down option */
+.selectboxit-option-first {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+/* The first Drop Down option optgroup */
+.selectboxit-optgroup-header + .selectboxit-option-first {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+/* The last Drop Down option */
+.selectboxit-option-last {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* Drop Down optgroup headers */
+.selectboxit-optgroup-header {
+  font-weight: bold;
+}
+
+/* Drop Down optgroup header hover psuedo class */
+.selectboxit-optgroup-header:hover {
+  cursor: default;
+}
+
+/* Drop Down down arrow container */
+.selectboxit-arrow-container {
+  /* Positions the down arrow */
+  width: 30px;
+  position: absolute;
+  left: 0;
+}
+
+/* Drop Down down arrow */
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+  /* Horizontally centers the down arrow */
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+
+/* Drop Down down arrow for jQueryUI and jQuery Mobile */
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.ui-icon {
+  top: 30%;
+}
+
+/* Drop Down individual option icon positioning */
+.selectboxit-option-icon-container {
+  float: left;
+}
+
+.selectboxit-container .selectboxit-option-icon {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Drop Down individual option icon positioning */
+.selectboxit-option-icon-url {
+  width: 18px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  float: left;
+}
+
+.selectboxit-rendering {
+  display: inline-block !important;
+  *display: inline !important;
+  zoom: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+/* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+.jqueryui .ui-icon {
+  background-color: inherit;
+}
+
+/* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+.jqueryui .ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+/*
+  Default Theme
+  -------------
+  Note: Feel free to remove all of the CSS underneath this line if you are not using the default theme
+*/
+.selectboxit-btn {
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+}
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus,
+.selectboxit-btn.selectboxit-enabled:active {
+  color: #333333;
+  background-color: #e6e6e6;
+}
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+.selectboxit-default-arrow {
+  width: 0;
+  height: 0;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.selectboxit-list {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selectboxit-list .selectboxit-option-anchor {
+  color: #333333;
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+  color: #ffffff;
+  background-color: #0081c2;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+}
+
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+  color: #999999;
+}
